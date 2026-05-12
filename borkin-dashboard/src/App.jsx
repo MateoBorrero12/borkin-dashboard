@@ -89,6 +89,8 @@ function App() {
 
     const token = localStorage.getItem("token");
 
+    console.log("Editando producto con ID:", editingId);
+
     try {
       if (editingId) {
         const res = await fetch(`${import.meta.env.VITE_API_URL}/api/products/${editingId}`, {
@@ -116,7 +118,7 @@ function App() {
         setFeedback("Producto editado correctamente.");
         setEditingId(null);
       } else {
-        const res = await fetch("http://localhost:4000/api/products", {
+        const res = await fetch(`${import.meta.env.VITE_API_URL}/api/products`, {
           method: "POST",
           headers: {
             "Content-Type": "application/json",
