@@ -423,6 +423,22 @@ Aunque un usuario sin permisos intente acceder manualmente a las rutas protegida
 
 ---
 
+## Usuarios demo
+
+### Admin
+Email: admin@borkin.com  
+Password: 123456  
+
+Puede crear, editar y eliminar productos.
+
+### Viewer
+Email: viewer@borkin.com  
+Password: 123456  
+
+Solo puede visualizar productos.
+
+---
+
 ### Seguridad implementada
 
 El sistema utiliza bcrypt para encriptar contraseñas antes de guardarlas en la base de datos.
