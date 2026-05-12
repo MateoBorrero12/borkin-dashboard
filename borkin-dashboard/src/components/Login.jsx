@@ -57,6 +57,12 @@ return (
         <h1>Borkin</h1>
         <p>Ingresá para administrar productos.</p>
 
+        <div className="demo-users">
+            <strong>Usuarios demo</strong>
+            <span>Admin: admin@borkin.com / 123456</span>
+            <span>Viewer: viewer@borkin.com / 123456</span>
+        </div>
+
         <input
             type="email"
             name="email"

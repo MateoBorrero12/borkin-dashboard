@@ -33,11 +33,11 @@ try {
     const hashedPassword = await bcrypt.hash(password, 10);
 
     const result = await pool.query(
-    `INSERT INTO users (name, email, password)
-    VALUES ($1, $2, $3)
-    RETURNING id, name, email, role`,
-    [name, email, hashedPassword]
-    );
+        `INSERT INTO users (name, email, password, role)
+        VALUES ($1, $2, $3, $4)
+        RETURNING id, name, email, role`,
+    [name, email, hashedPassword, "viewer"]
+);
 
     res.status(201).json({
         message: "Usuario registrado correctamente",
